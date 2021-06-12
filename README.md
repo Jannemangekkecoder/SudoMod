@@ -1,6 +1,6 @@
 Fully undetected and safe SudoMod for educational purposes ofcourse.
 
-Picture: https://i.imgur.com/vSyEjzo.png[/IMG]
+Picture: https://i.imgur.com/vSyEjzo.png
 
 What's changed ?
 Updated Natives
