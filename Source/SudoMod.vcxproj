@@ -58,7 +58,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;WIN32_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -75,7 +75,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -95,6 +95,13 @@
   <ItemGroup>
     <ClInclude Include="CrossMapping.h" />
     <ClInclude Include="enums.h" />
+    <ClInclude Include="Features\Car\Car.h" />
+    <ClInclude Include="Features\Gun\Gun.h" />
+    <ClInclude Include="Features\Local\Local.h" />
+    <ClInclude Include="Features\MenuFunctions.h" />
+    <ClInclude Include="Features\Misc\Misc.h" />
+    <ClInclude Include="Features\Online\Online.h" />
+    <ClInclude Include="Features\Other\Other.h" />
     <ClInclude Include="globalHandle.h" />
     <ClInclude Include="Hooking.h" />
     <ClInclude Include="InputHook.h" />
@@ -120,6 +127,13 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Features\Car\Car.cpp" />
+    <ClCompile Include="Features\Gun\Gun.cpp" />
+    <ClCompile Include="Features\Local\Local.cpp" />
+    <ClCompile Include="Features\MenuFunctions.cpp" />
+    <ClCompile Include="Features\Misc\Misc.cpp" />
+    <ClCompile Include="Features\Online\Online.cpp" />
+    <ClCompile Include="Features\Other\Other.cpp" />
     <ClCompile Include="Hooking.cpp" />
     <ClCompile Include="InputHook.cpp" />
     <ClCompile Include="keyboard.cpp" />

@@ -11,9 +11,12 @@ HANDLE mainFiber;
 DWORD wakeAt;
 
 std::vector<LPVOID> Hooking::m_hooks;
-IsDlcPresent* Hooking::m_is_dlc_present;
+uint64_t* Hooking::m_framecount;
+GetNumberOfEvents* Hooking::m_get_number_of_events;
 GetLabelText* Hooking::m_get_label_text;
-uint64_t* Hooking::m_frameCount;
+GetEventData* Hooking::m_get_event_data;
+RegisterFile* Hooking::m_register_file;
+TriggerScriptEvent* Hooking::m_trigger_script_event;
 PVOID Hooking::m_model_spawn_bypass;
 void* Hooking::m_native_return;
 eGameState* Hooking::m_gamestate;
@@ -84,17 +87,16 @@ void CMetaData::init()
 	return;
 }
 
-IsDlcPresent* OG_IS_DLC_PRESENT = nullptr;
-BOOL __cdecl HK_IS_DLC_PRESENT(std::uint32_t hash)
+GetNumberOfEvents* OG_GET_NUMBER_OF_EVENTS = nullptr;
+int32_t HK_GET_NUMBER_OF_EVENTS(int32_t unk)
 {
 	static uint64_t	last_frame = 0;
-	uint64_t current_frame = *Hooking::m_frameCount;
-	if (last_frame != current_frame)
+	if (last_frame != *Hooking::m_framecount)
 	{
-		last_frame = current_frame;
+		last_frame = *Hooking::m_framecount;
 		Hooking::onTickInit();
 	}
-	return OG_IS_DLC_PRESENT(hash);
+	return OG_GET_NUMBER_OF_EVENTS(unk);
 }
 
 GetLabelText* OG_GET_LABEL_TEXT = nullptr;
@@ -105,17 +107,64 @@ const char* HK_GET_LABEL_TEXT(void* _this, const char* label)
 	return OG_GET_LABEL_TEXT(_this, label);
 }
 
+GetEventData* OG_GET_EVENT_DATA = nullptr;
+bool HK_GET_EVENT_DATA(std::int32_t eventGroup, std::int32_t eventIndex, std::int64_t* args, std::uint32_t argCount)
+{
+	auto result = OG_GET_EVENT_DATA(eventGroup, eventIndex, args, argCount);
+	if (result && Online::event_logger)
+	{
+		Log_Info("===============================");
+		std::string evgroup = std::string("Script event group: ") + std::to_string(eventGroup).c_str();
+		Log_Info(_strdup(evgroup.c_str()));
+		std::string evindex = std::string("Script event index: ") + std::to_string(eventIndex).c_str();
+		Log_Info(_strdup(evindex.c_str()));
+		std::string evargcount = std::string("Script event argcount: ") + std::to_string(argCount).c_str();
+		Log_Info(_strdup(evargcount.c_str()));
+		for (std::uint32_t i = 0; i < argCount; ++i) {
+			std::string evargs = std::string("Script event args[") + std::to_string(i).c_str() + "] : " + std::to_string(args[i]).c_str();
+			Log_Info(_strdup(evargs.c_str()));
+		}
+	}
+	if (result && Online::event_blocker)
+	{
+		if (args[0] == -738295409) /* CEO BAN */
+		{
+			Log_Info("SudoMod || Script Event: CEO Ban");
+			Log_Info("SudoMod || Status: Blocked");
+			std::string sender = std::string("SudoMod || Sender: ") + PLAYER::GET_PLAYER_NAME(args[1]);
+			Log_Info(_strdup(sender.c_str()));
+			if (Online::event_karma)
+			{
+				Log_Info("SudoMod || Karma enabled, redirecting event.");
+				uint64_t tseargs[3] = { -738295409, args[1], 1 };
+				hooks.m_trigger_script_event(1, tseargs, 3, 1 << args[1]);
+			}
+		}
+		return false;
+	}
+	return result;
+}
+
 bool Hooking::HookNatives()
 {
-	MH_STATUS status = MH_CreateHook(Hooking::m_is_dlc_present, HK_IS_DLC_PRESENT, (void**)&OG_IS_DLC_PRESENT);
-	if ((status != MH_OK && status != MH_ERROR_ALREADY_CREATED) || MH_EnableHook(Hooking::m_is_dlc_present) != MH_OK)
+	/* Main Hook: GNOE */
+	MH_STATUS status = MH_CreateHook(Hooking::m_get_number_of_events, HK_GET_NUMBER_OF_EVENTS, (void**)&OG_GET_NUMBER_OF_EVENTS);
+	if ((status != MH_OK && status != MH_ERROR_ALREADY_CREATED) || MH_EnableHook(Hooking::m_get_number_of_events) != MH_OK)
 		return false;
-	Hooking::m_hooks.push_back(Hooking::m_is_dlc_present);
+	Hooking::m_hooks.push_back(Hooking::m_get_number_of_events);
+
+	/* Get Label Text - Used for adding custom text to game labels */
 
 	status = MH_CreateHook(Hooking::m_get_label_text, HK_GET_LABEL_TEXT, (void**)&OG_GET_LABEL_TEXT);
 	if (status != MH_OK || MH_EnableHook(Hooking::m_get_label_text) != MH_OK)
 		return false;
 	Hooking::m_hooks.push_back(Hooking::m_get_label_text);
+
+	/* Get Event Data - Used for Event logging or event blocking */
+	status = MH_CreateHook(Hooking::m_get_event_data, HK_GET_EVENT_DATA, (void**)&OG_GET_EVENT_DATA);
+	if (status != MH_OK || MH_EnableHook(Hooking::m_get_event_data) != MH_OK)
+		return false;
+	Hooking::m_hooks.push_back(Hooking::m_get_event_data);
 
 	return true;
 }
@@ -357,26 +406,32 @@ void	setFn
 
 void Hooking::FindPatterns()
 {
-	HANDLE steam = GetModuleHandleA("steam_api64.dll");
-
-
-	Log_Info("[Pattern Scanner] Found and Hooked Frame Count");
-	setPat<uint64_t>("Frame Count",
-		"\x8B\x15\x00\x00\x00\x00\x41\xFF\xCF",
-		"xx????xxx",
-		&Hooking::m_frameCount,
-		true,
-		2);
-
-
-	Log_Info("[Pattern Scanner] Found and Hooked Is Dlc Present");
-	setFn<IsDlcPresent*>("Is Dlc Present",
-		"\x48\x89\x5C\x24\x00\x57\x48\x83\xEC\x20\x81\xF9\x00\x00\x00\x00",
-		"xxxx?xxxxxxx????",
-		&Hooking::m_is_dlc_present);
-
 	char* c_location = nullptr;
 	void* v_location = nullptr;
+
+	Log_Info("[Pattern Scanner] Found and Hooked Frame Count");
+	c_location = Memory::pattern("F3 0F 10 0D ? ? ? ? 44 89 6B 08").count(1).get(0).get<char>(4);
+	c_location == nullptr ? FailPatterns("Frame Count") : Hooking::m_framecount = reinterpret_cast<uint64_t*>((c_location + *reinterpret_cast<int*>(c_location) + 4) - 8);
+
+	Log_Info("[Pattern Scanner] Found and Hooked Get Number Of Events");
+	c_location = Memory::pattern("48 83 EC 28 33 D2 85 C9").count(1).get(0).get<char>(0);
+	c_location == nullptr ? FailPatterns("Get Number Of Events") : Hooking::m_get_number_of_events = reinterpret_cast<decltype(Hooking::m_get_number_of_events)>(c_location);
+
+	Log_Info("[Pattern Scanner] Found and Hooked Get Label Text");
+	c_location = Memory::pattern("48 89 5C 24 ? 57 48 83 EC 20 48 8B DA 48 8B F9 48 85 D2 75 44 E8").count(1).get(0).get<char>(0);
+	c_location == nullptr ? FailPatterns("Get Label Text") : Hooking::m_get_label_text = reinterpret_cast<decltype(Hooking::m_get_label_text)>(c_location);
+
+	Log_Info("[Pattern Scanner] Found and Hooked Get Event Data");
+	c_location = Memory::pattern("48 85 C0 74 14 4C 8B 10").count(1).get(0).get<char>(-28);
+	c_location == nullptr ? FailPatterns("Get Event Data") : Hooking::m_get_event_data = reinterpret_cast<decltype(Hooking::m_get_event_data)>(c_location);
+
+	Log_Info("[Pattern Scanner] Found Register File");
+	c_location = Memory::pattern("48 89 5C 24 ? 48 89 6C 24 ? 48 89 7C 24 ? 41 54 41 56 41 57 48 83 EC 50 48 8B EA 4C 8B FA 48 8B D9 4D 85 C9").count(1).get(0).get<char>(0);
+	c_location == nullptr ? FailPatterns("Register File") : Hooking::m_register_file = reinterpret_cast<decltype(Hooking::m_register_file)>(c_location);
+
+	Log_Info("[Pattern Scanner] Found Trigger Script Event");
+	c_location = Memory::pattern("48 8B C4 48 89 58 08 48 89 68 10 48 89 70 18 48 89 78 20 41 56 48 81 EC ? ? ? ? 45 8B F0 41 8B F9").count(1).get(0).get<char>(0);
+	c_location == nullptr ? FailPatterns("Trigger Script Event") : Hooking::m_trigger_script_event = reinterpret_cast<decltype(Hooking::m_trigger_script_event)>(c_location);
 
 	Log_Info("[Pattern Scanner] Found Game State");
 	c_location = Memory::pattern("83 3D ? ? ? ? ? 75 17 8B 42 20 25").count(1).get(0).get<char>(2);
@@ -397,10 +452,6 @@ void Hooking::FindPatterns()
 	Log_Info("[Pattern Scanner] Found Native Return Adress");
 	c_location = Memory::pattern("FF E3").count(1).get(0).get<char>(0);
 	c_location == nullptr ? FailPatterns("Native Return Adress") : Hooking::m_native_return = reinterpret_cast<decltype(Hooking::m_native_return)>(c_location);
-
-	Log_Info("[Pattern Scanner] Found and Hooked Get Label Text");
-	c_location = Memory::pattern("48 89 5C 24 ? 57 48 83 EC 20 48 8B DA 48 8B F9 48 85 D2 75 44 E8").count(1).get(0).get<char>(0);
-	c_location == nullptr ? FailPatterns("Get Label Text") : Hooking::m_get_label_text = reinterpret_cast<decltype(Hooking::m_get_label_text)>(c_location);
 
 	Log_Info("[Pattern Scanner] Found World Pointer");
 	c_location = Memory::pattern("48 8B 05 ? ? ? ? 45 ? ? ? ? 48 8B 48 08 48 85 C9 74 07").count(1).get(0).get<char>(0);

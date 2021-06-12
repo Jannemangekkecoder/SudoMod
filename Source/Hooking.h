@@ -1,8 +1,11 @@
 #pragma once
 #include "enums.h"
 
-using IsDlcPresent = bool(std::uint32_t hash);
+using GetNumberOfEvents = int32_t(int32_t unk);
 using GetLabelText = const char* (void* unk, const char* label);
+using GetEventData = bool(std::int32_t eventGroup, std::int32_t eventIndex, std::int64_t* args, std::uint32_t argCount);
+using RegisterFile = uint32_t(int* p1, const char* p2, bool p3, const char* p4, bool p5);
+using TriggerScriptEvent = int(int eventgroup, uint64_t* arg, int argcount, uint32_t bit);
 
 class Hooking
 {
@@ -12,10 +15,13 @@ private:
 	static void FailPatterns(const char* name);
 
 public:
-	static std::vector<LPVOID>		m_hooks;
-	static IsDlcPresent* m_is_dlc_present;
+	static std::vector<LPVOID>	m_hooks;
+	static uint64_t* m_framecount;
+	static GetNumberOfEvents* m_get_number_of_events;
 	static GetLabelText* m_get_label_text;
-	static uint64_t* m_frameCount;
+	static GetEventData* m_get_event_data;
+	static RegisterFile* m_register_file;
+	static TriggerScriptEvent* m_trigger_script_event;
 	static PVOID m_model_spawn_bypass;
 	static void* m_native_return;
 	static eGameState* m_gamestate;

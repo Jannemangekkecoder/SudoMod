@@ -6,6 +6,7 @@ namespace Menu
 	class UserInterface
 	{
 	public:
+		bool reggedytd = false;
 		bool opened = false;
 		bool selectPressed = false;
 		bool leftPressed = false;
@@ -26,6 +27,7 @@ namespace Menu
 		bool StringVector(const char* option, std::vector<std::string> Vector, int& position);
 		bool StringVector(const char* option, std::vector<char*> Vector, int& position);
 	public:
+		int textureID;
 		int maxVisOptions = 11;
 		int currentOption = 1;
 		int optionCount = 0;
@@ -33,7 +35,7 @@ namespace Menu
 		int menuLevel = 0;
 		int optionsArray[1000];
 
-		int keyPressDelay = 160;
+		int keyPressDelay = 140;
 		int keyPressPreviousTick = GetTickCount();
 		int openKey = VK_F8;
 		int backKey = VK_BACK;
@@ -43,26 +45,24 @@ namespace Menu
 		int rightKey = VK_RIGHT;
 		int selectKey = VK_RETURN;
 	public:
-		SubMenus currentMenu[1000];
+		SubMenus currentMenu;
 		SubMenus menusArray[1000];
 	public:
 		float menuX = 0.85f;
 		float menuWidth = 0.21f;
 	public:
-		RGBA titlerect = { 255, 0, 100, 255 };
+		RGBA titlerect = { 248, 225, 5, 255 };
 		RGBA optionrect = { 0, 0, 0, 130 };
-		RGBA scroller = { 255, 0, 100, 210 };
+		RGBA scroller = { 248, 225, 5, 210 };
 	public:
 		RGBAF titletext = { 255, 255, 255, 255, 7 };
 		RGBAF optiontext = { 255, 255, 255, 255, 6 };
-		RGBAF optiontextselected = { 255, 255, 255, 255, 6 };
 	public:
 		void Keys();
 		void MoveMenu(SubMenus menu);
 		void BackMenu();
 
-		void Title();
-		void SubTitle(const char* title);
+		void Title(const char* title);
 		void End();
 	};
 	inline UserInterface gui;

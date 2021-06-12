@@ -12,6 +12,27 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="Features">
+      <UniqueIdentifier>{fcfe2863-9343-425e-832a-2c086dfbbc7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Local">
+      <UniqueIdentifier>{5923c1ae-b443-4489-9f78-241dc0f9c6da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Car">
+      <UniqueIdentifier>{e4b43e58-bad3-45c9-bbcb-99ff04a5459f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Gun">
+      <UniqueIdentifier>{895871b7-69da-4701-b946-53d5cc648fd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Misc">
+      <UniqueIdentifier>{a4cbfc08-880e-4b7b-9b6b-8d57dcecbfa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Online">
+      <UniqueIdentifier>{c82076d4-c4cc-40d8-b07a-4b1bd2871809}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Other">
+      <UniqueIdentifier>{7e8d3635-34ae-405f-9654-59498f86c857}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -62,6 +83,27 @@
     <ClInclude Include="globalHandle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Features\Local\Local.h">
+      <Filter>Features\Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\Car\Car.h">
+      <Filter>Features\Car</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\Gun\Gun.h">
+      <Filter>Features\Gun</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\Misc\Misc.h">
+      <Filter>Features\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\Other\Other.h">
+      <Filter>Features\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\Online\Online.h">
+      <Filter>Features\Online</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\MenuFunctions.h">
+      <Filter>Features</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -93,6 +135,27 @@
     </ClCompile>
     <ClCompile Include="Hooking.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\Local\Local.cpp">
+      <Filter>Features\Local</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\Car\Car.cpp">
+      <Filter>Features\Car</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\Gun\Gun.cpp">
+      <Filter>Features\Gun</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\Misc\Misc.cpp">
+      <Filter>Features\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\Other\Other.cpp">
+      <Filter>Features\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\Online\Online.cpp">
+      <Filter>Features\Online</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\MenuFunctions.cpp">
+      <Filter>Features</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

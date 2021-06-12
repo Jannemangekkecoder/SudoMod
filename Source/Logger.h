@@ -6,7 +6,7 @@
 * Error = Red + Close GTA
 */
 inline void Log_Info(const char* msg, ...) {
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 	char buffer[4096]{};
 	va_list args{};
 

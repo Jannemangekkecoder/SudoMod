@@ -28,6 +28,13 @@ DWORD WINAPI ControlThread(LPVOID lpParam)
 		std::this_thread::sleep_for(std::chrono::milliseconds(10));
 		std::this_thread::yield();
 		if (GetAsyncKeyState(VK_END)) { g_running = false; }
+
+		if (Menu::gui.textureID != 0 && !Menu::gui.reggedytd) // Cringe code, please no look
+		{
+			std::string ytd = std::string("YTD File Registered, Texture ID: ") + std::to_string(Menu::gui.textureID).c_str();
+			Log_Info(_strdup(ytd.c_str()));
+			Menu::gui.reggedytd = true;
+		}
 	}
 
 	Hooking::Cleanup();

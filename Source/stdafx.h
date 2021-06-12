@@ -57,4 +57,13 @@
 #include <codecvt>
 #include <stdio.h>
 
+/* Features */
+#include "Features/Local/Local.h"
+#include "Features/Car/Car.h"
+#include "Features/Gun/Gun.h"
+#include "Features/Misc/Misc.h"
+#include "Features/Other/Other.h"
+#include "Features/Online/Online.h"
+#include "Features/MenuFunctions.h"
+
 extern std::atomic_bool g_running;

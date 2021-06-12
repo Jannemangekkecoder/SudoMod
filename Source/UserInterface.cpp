@@ -13,10 +13,6 @@ namespace Menu
 		HUD::END_TEXT_COMMAND_DISPLAY_TEXT(position.x, position.y, NULL);
 
 	}
-	char* StringToChar(std::string string)
-	{
-		return _strdup(string.c_str());
-	}
 	void Menu::Drawing::Sprite(std::string Streamedtexture, std::string textureName, float x, float y, float width, float height, float rotation, int r, int g, int b, int a)
 	{
 		if (!GRAPHICS::HAS_STREAMED_TEXTURE_DICT_LOADED((char*)Streamedtexture.c_str()))
@@ -34,10 +30,21 @@ namespace Menu
 		GRAPHICS::DRAW_RECT(position.x, position.y, size.w, size.h, rgba.r, rgba.g, rgba.b, rgba.a, NULL);
 	}
 
-	void UserInterface::Title()
+	void UserInterface::Title(const char* title)
 	{
-		draw.Text("Spastic", titletext, { menuX, 0.055f }, { 0.85f, 0.85f }, true);
-		draw.Rect(titlerect, { menuX, 0.0750f }, { menuWidth, 0.1f });
+		if (gui.textureID != 0) // If no YTD found, it will draw text and a rect itself. 
+		{
+			draw.Sprite("SudoMod", "EpicHeader", menuX, 0.0750f, menuWidth, 0.1f, 0, 255, 255, 255, 255);
+		}
+		else
+		{
+			draw.Text("SudoMod", titletext, { menuX, 0.055f }, { 0.85f, 0.85f }, true);
+			draw.Rect(titlerect, { menuX, 0.0750f }, { menuWidth, 0.1f });
+		}
+
+		// SubmenuBar
+		draw.Rect({ 0, 0, 0, 255 }, { menuX, (optionCount + 1) * 0.035f + 0.1065f }, { menuWidth, 0.035f });
+		draw.Text(title, { 255, 255, 255, 255, 6 }, { menuX, (optionCount) * 0.035f + 0.127f }, { 0.4f, 0.4f }, true);
 
 		// Disable Controls
 		HUD::HIDE_HELP_TEXT_THIS_FRAME();
@@ -61,13 +68,6 @@ namespace Menu
 		PAD::DISABLE_CONTROL_ACTION(2, INPUT_VEH_HEADLIGHT, true);
 	}
 
-	void UserInterface::SubTitle(const char* title)
-	{
-		/* SubmenuBar */
-		draw.Rect({ 0, 0, 0, 255 }, { menuX, (optionCount + 1) * 0.035f + 0.1065f }, { menuWidth, 0.035f });
-		draw.Text(title, { 255, 255, 255, 255, 6 }, { menuX, (optionCount) * 0.035f + 0.127f }, { 0.4f, 0.4f }, true);
-	}
-
 	bool UserInterface::Option(const char* option)
 	{
 		optionCount++;
@@ -75,13 +75,13 @@ namespace Menu
 		if (currentOption <= maxVisOptions && optionCount <= maxVisOptions)
 		{
 			draw.Rect(optionrect, { menuX, (optionCount) * 0.035f + 0.1415f }, { menuWidth, 0.035f });
-			draw.Text(option, onThis ? optiontextselected : optiontext, { menuX - 0.1f, (optionCount) * 0.035f + 0.125f }, { 0.45f, 0.45f }, false);
+			draw.Text(option, optiontext, { menuX - 0.1f, (optionCount) * 0.035f + 0.125f }, { 0.45f, 0.45f }, false);
 			onThis ? draw.Rect(scroller, { menuX, (optionCount) * 0.035f + 0.1415f }, { menuWidth, 0.035f }) : NULL;
 		}
 		else if (optionCount > (currentOption - maxVisOptions) && optionCount <= currentOption)
 		{
 			draw.Rect(optionrect, { menuX,  (optionCount - (currentOption - maxVisOptions)) * 0.035f + 0.1415f }, { menuWidth, 0.035f });
-			draw.Text(option, onThis ? optiontextselected : optiontext, { menuX - 0.1f, (optionCount - (currentOption - maxVisOptions)) * 0.035f + 0.125f }, { 0.45f, 0.45f }, false);
+			draw.Text(option, optiontext, { menuX - 0.1f, (optionCount - (currentOption - maxVisOptions)) * 0.035f + 0.125f }, { 0.45f, 0.45f }, false);
 			onThis ? draw.Rect(scroller, { menuX,  (optionCount - (currentOption - maxVisOptions)) * 0.035f + 0.1415f }, { menuWidth, 0.035f }) : NULL;
 		}
 		if (currentOption == optionCount)
@@ -375,6 +375,7 @@ namespace Menu
 			draw.Rect({ 0, 0, 0, 210 }, { menuX, (optionCount + 1) * 0.035f + 0.1415f }, { menuWidth, 0.035f });
 			draw.Text(StringToChar(std::to_string(currentOption) + "/" + std::to_string(optionCount)), { 255, 255, 255, 255, 6 }, { menuX - 0.1f, (optionCount + 1) * 0.035f + 0.125f }, { 0.5f, 0.5f }, false);
 			draw.Text("1.0", { 255, 255, 255, 255, 6 }, { menuX + 0.088f, (optionCount + 1) * 0.035f + 0.125f }, { 0.5f, 0.5f }, false);
+
 			/*Switches the Arrow on optioncount*/
 			if (currentOption == 1 && optionCount > 1) {
 				draw.Sprite("commonmenu", "arrowright", menuX, ((optionCount + 1) * 0.035f + 0.142f), 0.010f, 0.0175f, 90, 255, 255, 255, 255);
@@ -396,66 +397,53 @@ namespace Menu
 		rightPressed = false;
 		if (GetTickCount() - keyPressPreviousTick > keyPressDelay) {
 			if (GetAsyncKeyState(openKey)) {
-				menuLevel == 0 ? MoveMenu(SubMenus::mainmenu) : menuLevel == 1 ? BackMenu() : NULL;
+				menuLevel == 0 ? MoveMenu(SubMenus::MAINMENU) : menuLevel == 1 ? BackMenu() : NULL;
 
-				if (opened)
-				{
-					opened = false;
-				}
-				else if (!opened)
-				{
-					opened = true;
-				}
-
-				keyPressPreviousTick = GetTickCount();
+				if (opened) { MoveMenu(SubMenus::NOMENU); opened = false; } else if (!opened) { MoveMenu(SubMenus::MAINMENU); opened = true; } if (menusounds) { if (opened) { AUDIO::PLAY_SOUND_FRONTEND(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false); } else { AUDIO::PLAY_SOUND_FRONTEND(-1, "BACK", "HUD_FRONTEND_DEFAULT_SOUNDSET", false); } }
 				
-				if (menusounds) 
-				{
-					if (opened) { AUDIO::PLAY_SOUND_FRONTEND(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false); }
-					else { AUDIO::PLAY_SOUND_FRONTEND(-1, "BACK", "HUD_FRONTEND_DEFAULT_SOUNDSET", false); }
-				}
+				keyPressPreviousTick = GetTickCount();
 			}
 			else if (GetAsyncKeyState(backKey)) {
 				menuLevel > 0 ? BackMenu() : NULL;
 
-				keyPressPreviousTick = GetTickCount();
-
 				if (menusounds) { AUDIO::PLAY_SOUND_FRONTEND(-1, "BACK", "HUD_FRONTEND_DEFAULT_SOUNDSET", false); }
+
+				keyPressPreviousTick = GetTickCount();
 			}
 			else if (GetAsyncKeyState(upKey)) {
 				currentOption > 1 ? currentOption-- : currentOption = optionCount;
 
-				keyPressPreviousTick = GetTickCount();
-
 				if (menusounds) { AUDIO::PLAY_SOUND_FRONTEND(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", false); }
+
+				keyPressPreviousTick = GetTickCount();
 			}
 			else if (GetAsyncKeyState(downKey)) {
 				currentOption < optionCount ? currentOption++ : currentOption = 1;
 
-				keyPressPreviousTick = GetTickCount();
-
 				if (menusounds) { AUDIO::PLAY_SOUND_FRONTEND(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", false); }
+
+				keyPressPreviousTick = GetTickCount();
 			}
 			else if (GetAsyncKeyState(leftKey)) {
 				leftPressed = true;
 
-				keyPressPreviousTick = GetTickCount();
-
 				if (menusounds) { AUDIO::PLAY_SOUND_FRONTEND(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false); }
+
+				keyPressPreviousTick = GetTickCount();
 			}
 			else if (GetAsyncKeyState(rightKey)) {
 				rightPressed = true;
 
-				keyPressPreviousTick = GetTickCount();
-
 				if (menusounds) { AUDIO::PLAY_SOUND_FRONTEND(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false); }
+
+				keyPressPreviousTick = GetTickCount();
 			}
 			else if (GetAsyncKeyState(selectKey)) {
 				selectPressed = true;
 
-				keyPressPreviousTick = GetTickCount();
-
 				if (menusounds) { AUDIO::PLAY_SOUND_FRONTEND(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false); }
+
+				keyPressPreviousTick = GetTickCount();
 			}
 		}
 		optionCount = 0;
@@ -464,17 +452,17 @@ namespace Menu
 
 	void UserInterface::MoveMenu(SubMenus menu)
 	{
-		menusArray[menuLevel] = currentMenu[menuLevel];
+		menusArray[menuLevel] = currentMenu;
 		optionsArray[menuLevel] = currentOption;
 		menuLevel++;
-		currentMenu[menuLevel] = menu;
+		currentMenu = menu;
 		currentOption = 1;
 	}
 
 	void UserInterface::BackMenu()
 	{
 		menuLevel--;
-		currentMenu[menuLevel] = menusArray[menuLevel];
+		currentMenu = menusArray[menuLevel];
 		currentOption = optionsArray[menuLevel];
 	}
 }
