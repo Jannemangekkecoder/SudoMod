@@ -34,7 +34,7 @@ namespace Menu
 	{
 		if (gui.textureID != 0) // If no YTD found, it will draw text and a rect itself. 
 		{
-			draw.Sprite("SudoMod", "EpicHeader", menuX, 0.0750f, menuWidth, 0.1f, 0, 255, 255, 255, 255);
+			draw.Sprite("SudoMod", "EpicHeader", menuX, 0.0750f, menuWidth, 0.1f, 0, 255, 255, 255, 255); /* https://www.unknowncheats.me/forum/3158178-post18.html */
 		}
 		else
 		{
@@ -356,19 +356,19 @@ namespace Menu
 	void UserInterface::End()
 	{
 		if (optionCount >= maxVisOptions) {
-			draw.Rect({ 0, 0, 0, 210 }, { menuX, (optionCount + 1) * 0.035f + 0.1415f }, { menuWidth, 0.035f });
-			draw.Text(StringToChar(std::to_string(currentOption) + "/" + std::to_string(optionCount)), { 255, 255, 255, 255, 6 }, { menuX - 0.1f, ((maxVisOptions + 1)) * 0.035f + 0.125f }, { 0.5f, 0.5f }, false);
-			draw.Text("1.0", { 255, 255, 255, 255, 6 }, { menuX + 0.088f, ((maxVisOptions + 1)) * 0.035f + 0.125f }, { 0.5f, 0.5f }, false);
+			draw.Rect({ 0, 0, 0, 210 }, { menuX, (maxVisOptions + 1) * 0.035f + 0.1415f }, { menuWidth, 0.035f });
+			draw.Text(StringToChar(std::to_string(currentOption) + "/" + std::to_string(optionCount)), { 255, 255, 255, 255, 6 }, { menuX - 0.1f, (maxVisOptions + 1) * 0.035f + 0.125f }, { 0.5f, 0.5f }, false);
+			draw.Text("1.0", { 255, 255, 255, 255, 6 }, { menuX + 0.088f, (maxVisOptions + 1) * 0.035f + 0.125f }, { 0.5f, 0.5f }, false);
 
 			/*Switches the Arrow on optioncount*/
 			if (currentOption == 1) {
-				draw.Sprite("commonmenu", "arrowright", menuX, ((maxVisOptions + 1) * 0.035f + 0.142f), 0.010f, 0.0175f, 90, 255, 255, 255, 255);
+				draw.Sprite("commonmenu", "arrowright", menuX, (maxVisOptions + 1) * 0.035f + 0.142f, 0.010f, 0.0175f, 90, 255, 255, 255, 255);
 			}
 			else if (currentOption == optionCount) {
-				draw.Sprite("commonmenu", "arrowright", menuX, ((maxVisOptions + 1) * 0.035f + 0.142f), 0.010f, 0.0175f, 270, 255, 255, 255, 255);
+				draw.Sprite("commonmenu", "arrowright", menuX, (maxVisOptions + 1) * 0.035f + 0.142f, 0.010f, 0.0175f, 270, 255, 255, 255, 255);
 			}
 			else {
-				draw.Sprite("commonmenu", "shop_arrows_upanddown", menuX, ((maxVisOptions + 1) * 0.035f + 0.140f), 0.020f, 0.035f, 180, 255, 255, 255, 255);
+				draw.Sprite("commonmenu", "shop_arrows_upanddown", menuX, (maxVisOptions + 1) * 0.035f + 0.140f, 0.020f, 0.035f, 180, 255, 255, 255, 255);
 			}
 		}
 		else if (optionCount > 0) {

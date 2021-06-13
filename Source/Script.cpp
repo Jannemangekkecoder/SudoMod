@@ -7,7 +7,7 @@ void ScriptMain() {
 	
 	using namespace Menu;
 	while (true) {
-		hooks.m_register_file(&gui.textureID, "C:\\SudoMod\\Textures\\SudoMod.ytd", true, "SudoMod.ytd", false); // Load YTD
+		hooks.m_register_file(&gui.textureID, "C:\\SudoMod\\Textures\\SudoMod.ytd", true, "SudoMod.ytd", false); // Load YTD  /* https://www.unknowncheats.me/forum/3158178-post18.html */
 		gui.Keys();
 
 		/* Features */
@@ -38,6 +38,22 @@ void ScriptMain() {
 				std::string scname = std::string("SocialClub Name: ") + PLAYER::GET_PLAYER_NAME(PLAYER::PLAYER_ID());
 				Log_Info(_strdup(scname.c_str()));
 			}
+			if (gui.Option("Spawn T20")) { MenuFunctions::SpawnVehicle("T20"); }
+			if (gui.Option("Spawn Adder")) { MenuFunctions::SpawnVehicle("Adder"); }
+			if (gui.Option("Spawn Vagner")) { MenuFunctions::SpawnVehicle("Vagner"); }
+			if (gui.Option("Spawn T20")) { MenuFunctions::SpawnVehicle("T20"); }
+			if (gui.Option("Spawn T20")) { MenuFunctions::SpawnVehicle("T20"); }
+			if (gui.Option("Spawn T20")) { MenuFunctions::SpawnVehicle("T20"); }
+			if (gui.Option("Spawn T20")) { MenuFunctions::SpawnVehicle("T20"); }
+			if (gui.Option("Spawn T20")) { MenuFunctions::SpawnVehicle("T20"); }
+			if (gui.Option("Spawn T20")) { MenuFunctions::SpawnVehicle("T20"); }
+			if (gui.Option("Spawn T20")) { MenuFunctions::SpawnVehicle("T20"); }
+			if (gui.Option("Spawn T20")) { MenuFunctions::SpawnVehicle("T20"); }
+			if (gui.Option("Spawn T20")) { MenuFunctions::SpawnVehicle("T20"); }
+			if (gui.Option("Spawn T20")) { MenuFunctions::SpawnVehicle("T20"); }
+			if (gui.Option("Spawn T20")) { MenuFunctions::SpawnVehicle("T20"); }
+			if (gui.Option("Spawn T20")) { MenuFunctions::SpawnVehicle("T20"); }
+			if (gui.Option("Spawn T20")) { MenuFunctions::SpawnVehicle("T20"); }
 			if (gui.Option("Spawn T20")) { MenuFunctions::SpawnVehicle("T20"); }
 
 		}
