@@ -2,7 +2,7 @@
 
 void ScriptMain();
 
-enum SubMenus { //Add Sub Menus in here
+enum class SubMenus { //Add Sub Menus in here
 	NOMENU,
 	MAINMENU,
 	TEST,

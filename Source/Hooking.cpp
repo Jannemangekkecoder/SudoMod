@@ -131,7 +131,7 @@ bool HK_GET_EVENT_DATA(std::int32_t eventGroup, std::int32_t eventIndex, std::in
 		{
 			Log_Info("SudoMod || Script Event: CEO Ban");
 			Log_Info("SudoMod || Status: Blocked");
-			std::string sender = std::string("SudoMod || Sender: ") + PLAYER::GET_PLAYER_NAME(args[1]);
+			std::string sender = std::string("SudoMod || Sender: ") + PLAYER::GET_PLAYER_NAME(static_cast<int32_t>(args[1]));
 			Log_Info(_strdup(sender.c_str()));
 			if (Online::event_karma)
 			{

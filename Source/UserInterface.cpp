@@ -195,7 +195,7 @@ namespace Menu
 		return false;
 	}
 
-	bool UserInterface::Float(const char* option, float& _float, int min, int max)
+	bool UserInterface::Float(const char* option, float& _float, float min, float max)
 	{
 		Option(option);
 
@@ -220,7 +220,7 @@ namespace Menu
 		return false;
 	}
 
-	bool UserInterface::Float(const char* option, float& _float, int min, int max, int step)
+	bool UserInterface::Float(const char* option, float& _float, float min, float max, float step)
 	{
 		Option(option);
 
@@ -245,13 +245,13 @@ namespace Menu
 		return false;
 	}
 
-	bool UserInterface::IntVector(const char* option, std::vector<int> Vector, int& position)
+	bool UserInterface::IntVector(const char* option, std::vector<int> Vector, size_t& position)
 	{
 		Option(option);
 
 		if (optionCount == currentOption) {
-			int max = Vector.size() - 1;
-			int min = 0;
+			const size_t max = Vector.size() - 1;
+			const size_t min = 0;
 			if (leftPressed) {
 				position >= 1 ? position-- : position = max;
 			}
@@ -271,13 +271,13 @@ namespace Menu
 		return false;
 	}
 
-	bool UserInterface::FloatVector(const char* option, std::vector<float> Vector, int& position)
+	bool UserInterface::FloatVector(const char* option, std::vector<float> Vector, size_t& position)
 	{
 		Option(option);
 
 		if (optionCount == currentOption) {
-			size_t max = Vector.size() - 1;
-			int min = 0;
+			const size_t max = Vector.size() - 1;
+			const size_t min = 0;
 			if (leftPressed) {
 				position >= 1 ? position-- : position = max;
 			}
@@ -297,13 +297,13 @@ namespace Menu
 		return false;
 	}
 
-	bool UserInterface::StringVector(const char* option, std::vector<std::string> Vector, int& position)
+	bool UserInterface::StringVector(const char* option, std::vector<std::string> Vector, size_t& position)
 	{
 		Option(option);
 
 		if (optionCount == currentOption) {
-			size_t max = Vector.size() - 1;
-			int min = 0;
+			const size_t max = Vector.size() - 1;
+			const size_t min = 0;
 			if (leftPressed) {
 				position >= 1 ? position-- : position = max;
 			}
@@ -323,13 +323,13 @@ namespace Menu
 		return false;
 	}
 
-	bool UserInterface::StringVector(const char* option, std::vector<char*> Vector, int& position)
+	bool UserInterface::StringVector(const char* option, std::vector<char*> Vector, size_t& position)
 	{
 		Option(option);
 
 		if (optionCount == currentOption) {
-			size_t max = Vector.size() - 1;
-			int min = 0;
+			const size_t max = Vector.size() - 1;
+			const size_t min = 0;
 			if (leftPressed) {
 				position >= 1 ? position-- : position = max;
 			}

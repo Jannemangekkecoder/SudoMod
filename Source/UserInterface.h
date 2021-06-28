@@ -1,5 +1,7 @@
 #pragma once
-extern enum SubMenus;
+
+// Fwd
+enum class SubMenus;
 
 namespace Menu
 {
@@ -20,12 +22,12 @@ namespace Menu
 		bool Bool(const char* option, bool& b00l);
 		bool Int(const char* option, int& _int, int min, int max);
 		bool Int(const char* option, int& _int, int min, int max, int step);
-		bool Float(const char* option, float& _float, int min, int max);
-		bool Float(const char* option, float& _float, int min, int max, int step);
-		bool IntVector(const char* option, std::vector<int> Vector, int& position);
-		bool FloatVector(const char* option, std::vector<float> Vector, int& position);
-		bool StringVector(const char* option, std::vector<std::string> Vector, int& position);
-		bool StringVector(const char* option, std::vector<char*> Vector, int& position);
+		bool Float(const char* option, float& _float, float min, float max);
+		bool Float(const char* option, float& _float, float min, float max, float step);
+		bool IntVector(const char* option, std::vector<int> Vector, size_t& position);
+		bool FloatVector(const char* option, std::vector<float> Vector, size_t& position);
+		bool StringVector(const char* option, std::vector<std::string> Vector, size_t& position);
+		bool StringVector(const char* option, std::vector<char*> Vector, size_t& position);
 	public:
 		int textureID;
 		int maxVisOptions = 11;
@@ -35,8 +37,8 @@ namespace Menu
 		int menuLevel = 0;
 		int optionsArray[1000];
 
-		int keyPressDelay = 140;
-		int keyPressPreviousTick = GetTickCount();
+		DWORD keyPressDelay = 140;
+		DWORD keyPressPreviousTick = GetTickCount();
 		int openKey = VK_F8;
 		int backKey = VK_BACK;
 		int upKey = VK_UP;

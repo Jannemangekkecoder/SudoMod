@@ -11,7 +11,7 @@ inline void Log_Info(const char* msg, ...) {
 	va_list args{};
 
 	va_start(args, msg);
-	_vsnprintf(buffer, sizeof(buffer), msg, args) + 1;
+	vsnprintf_s(buffer, sizeof(buffer), msg, args);
 	printf(buffer);
 	printf("\n");
 	va_end(args);
@@ -23,7 +23,7 @@ inline void Log_Error(const char* msg, ...) {
 	va_list args{};
 
 	va_start(args, msg);
-	_vsnprintf(buffer, sizeof(buffer), msg, args) + 1;
+	vsnprintf_s(buffer, sizeof(buffer), msg, args);
 	printf(buffer);
 	printf("\n");
 	va_end(args);
@@ -38,7 +38,7 @@ inline void Log_Debug(const char* msg, ...) {
 	va_list args{};
 
 	va_start(args, msg);
-	_vsnprintf(buffer, sizeof(buffer), msg, args) + 1;
+	vsnprintf_s(buffer, sizeof(buffer), msg, args);
 	printf(buffer);
 	printf("\n");
 	va_end(args);
