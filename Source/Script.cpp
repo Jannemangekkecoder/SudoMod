@@ -35,7 +35,7 @@ void ScriptMain() {
 				if (gui.Option("Print Player Name"))
 				{
 					std::string scname = std::string("SocialClub Name: ") + PLAYER::GET_PLAYER_NAME(PLAYER::PLAYER_ID());
-					Log_Info(_strdup(scname.c_str()));
+					Log_Info(StringToChar(scname));
 				}
 				if (gui.Option("Spawn T20")) { MenuFunctions::SpawnVehicle("T20"); }
 				if (gui.Option("Spawn Adder")) { MenuFunctions::SpawnVehicle("Adder"); }
@@ -82,7 +82,7 @@ void ScriptMain() {
 					int64_t tseargs[3] = { -738295409, Online::g_SelectedPlayer, 1 };
 					hooks.m_trigger_script_event(1, tseargs, 3, 1 << Online::g_SelectedPlayer);
 					std::string sent = std::string("SudoMod || Sent Event CEO BAN to: ") + PLAYER::GET_PLAYER_NAME(Online::g_SelectedPlayer);
-					Log_Info(_strdup(sent.c_str()));
+					Log_Info(StringToChar(sent));
 				}
 			}
 			break;
