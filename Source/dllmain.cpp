@@ -32,7 +32,7 @@ DWORD WINAPI ControlThread(LPVOID lpParam)
 		if (Menu::gui.textureID != 0 && !Menu::gui.reggedytd) // Cringe code, please no look
 		{
 			std::string ytd = std::string("YTD File Registered, Texture ID: ") + std::to_string(Menu::gui.textureID).c_str();
-			Log_Info(_strdup(ytd.c_str()));
+			Log_Info(StringToChar(ytd));
 			Menu::gui.reggedytd = true;
 		}
 	}

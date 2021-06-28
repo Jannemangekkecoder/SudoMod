@@ -35,6 +35,7 @@
 #include <thread>
 
 // Additional Header Files:
+#include "StringToChar.h"
 #include "Memory.h"
 #include "types.h"
 #include "InputHook.h"

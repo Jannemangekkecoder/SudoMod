@@ -27,57 +27,50 @@ using Sphere = std::int32_t;
 using ScrHandle = std::int32_t;
 
 #pragma pack(push, 1)
-typedef struct
-{
+struct Vector3 {
 	float x;
-	DWORD _paddingx;
+	uint32_t _paddingx;
 	float y;
-	DWORD _paddingy;
+	uint32_t _paddingy;
 	float z;
-	DWORD _paddingz;
-} Vector3;
+	uint32_t _paddingz;
+};
 #pragma pack(pop)
 
 #pragma pack(push, 1)
-typedef struct
-{
+struct Vector3_t {
 	float x;
 	float y;
 	float z;
-} Vector3_t;
+};
 #pragma pack(pop)
 
 #pragma pack(push, 1)
-typedef struct VECTOR2 
-{
+struct VECTOR2 {
 	float x, y;
 };
 #pragma pack(pop)
 
 #pragma pack(push, 1)
-typedef struct VECTOR2_2 
-{
+struct VECTOR2_2 {
 	float w, h;
 };
 #pragma pack(pop)
 
 #pragma pack(push, 1)
-typedef struct RGBAF 
-{
+struct RGBAF {
 	int r, g, b, a, f;
 };
 #pragma pack(pop)
 
 #pragma pack(push, 1)
-typedef struct RGBA 
-{
+struct RGBA {
 	int r, g, b, a;
 };
 #pragma pack(pop)
 
 #pragma pack(push, 1)
-typedef struct RGB
-{
+struct RGB {
 	int r, g, b;
 };
 #pragma pack(pop)

@@ -2,7 +2,7 @@
 
 void ScriptMain();
 
-enum SubMenus { //Add Sub Menus in here
+enum class SubMenus { //Add Sub Menus in here
 	NOMENU,
 	MAINMENU,
 	TEST,
@@ -10,8 +10,3 @@ enum SubMenus { //Add Sub Menus in here
 	PLAYERLIST,
 	PLAYERLIST_SELECTED
 };
-
-inline char* StringToChar(std::string string) // Handy little thing
-{
-	return _strdup(string.c_str());
-}

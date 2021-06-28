@@ -104,6 +104,9 @@
     <ClInclude Include="Features\MenuFunctions.h">
       <Filter>Features</Filter>
     </ClInclude>
+    <ClInclude Include="StringToChar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

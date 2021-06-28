@@ -115,14 +115,14 @@ bool HK_GET_EVENT_DATA(std::int32_t eventGroup, std::int32_t eventIndex, std::in
 	{
 		Log_Info("===============================");
 		std::string evgroup = std::string("Script event group: ") + std::to_string(eventGroup).c_str();
-		Log_Info(_strdup(evgroup.c_str()));
+		Log_Info(StringToChar(evgroup));
 		std::string evindex = std::string("Script event index: ") + std::to_string(eventIndex).c_str();
-		Log_Info(_strdup(evindex.c_str()));
+		Log_Info(StringToChar(evindex));
 		std::string evargcount = std::string("Script event argcount: ") + std::to_string(argCount).c_str();
-		Log_Info(_strdup(evargcount.c_str()));
+		Log_Info(StringToChar(evargcount));
 		for (std::uint32_t i = 0; i < argCount; ++i) {
 			std::string evargs = std::string("Script event args[") + std::to_string(i).c_str() + "] : " + std::to_string(args[i]).c_str();
-			Log_Info(_strdup(evargs.c_str()));
+			Log_Info(StringToChar(evargs));
 		}
 	}
 	if (result && Online::event_blocker)
@@ -131,12 +131,12 @@ bool HK_GET_EVENT_DATA(std::int32_t eventGroup, std::int32_t eventIndex, std::in
 		{
 			Log_Info("SudoMod || Script Event: CEO Ban");
 			Log_Info("SudoMod || Status: Blocked");
-			std::string sender = std::string("SudoMod || Sender: ") + PLAYER::GET_PLAYER_NAME(args[1]);
-			Log_Info(_strdup(sender.c_str()));
+			std::string sender = std::string("SudoMod || Sender: ") + PLAYER::GET_PLAYER_NAME(static_cast<int32_t>(args[1]));
+			Log_Info(StringToChar(sender));
 			if (Online::event_karma)
 			{
 				Log_Info("SudoMod || Karma enabled, redirecting event.");
-				uint64_t tseargs[3] = { -738295409, args[1], 1 };
+				int64_t tseargs[3] = { -738295409, args[1], 1 };
 				hooks.m_trigger_script_event(1, tseargs, 3, 1 << args[1]);
 			}
 		}

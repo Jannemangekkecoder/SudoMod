@@ -153,7 +153,7 @@ namespace Menu
 
 		if (optionCount == currentOption) {
 			if (leftPressed) {
-				_int >= min ? _int-- : _int = max;
+				_int > min ? _int-- : _int = max;
 			}
 			if (rightPressed) {
 				_int < max ? _int++ : _int = min;
@@ -177,7 +177,7 @@ namespace Menu
 
 		if (optionCount == currentOption) {
 			if (leftPressed) {
-				_int >= min ? _int -= step : _int = max;
+				_int > min ? _int -= step : _int = max;
 			}
 			if (rightPressed) {
 				_int < max ? _int += step : _int = min;
@@ -195,19 +195,18 @@ namespace Menu
 		return false;
 	}
 
-#pragma warning(disable: 4244)
-	bool UserInterface::Float(const char* option, float& _float, int min, int max)
+	bool UserInterface::Float(const char* option, float& _float, float min, float max)
 	{
 		Option(option);
 
 		if (optionCount == currentOption) {
 			if (leftPressed) {
-				_float <= min ? _float = max : _float -= 0.1f;
+				_float > min ? _float -= 0.1f : _float = max;
 			}
 			if (rightPressed) {
-				_float >= max ? _float = min : _float += 0.1f;
+				_float < max ? _float += 0.1f : _float = min;
 			}
-			_float < min ? _float = max : _float > max ? _float = min : NULL;
+			_float < min ? _float = max : _float > max ? _float = min : _float = _float;
 		}
 
 		if (currentOption <= maxVisOptions && optionCount <= maxVisOptions)
@@ -221,18 +220,18 @@ namespace Menu
 		return false;
 	}
 
-	bool UserInterface::Float(const char* option, float& _float, int min, int max, int step)
+	bool UserInterface::Float(const char* option, float& _float, float min, float max, float step)
 	{
 		Option(option);
 
 		if (optionCount == currentOption) {
 			if (leftPressed) {
-				_float <= min ? _float = max : _float -= 0.1f;
+				_float > min ? _float -= step : _float = max;
 			}
 			if (rightPressed) {
-				_float >= max ? _float = min : _float += 0.1f;
+				_float < max ? _float += step : _float = min;
 			}
-			_float < min ? _float = max : _float > max ? _float = min : NULL;
+			_float < min ? _float = max : _float > max ? _float = min : _float = _float;
 		}
 
 		if (currentOption <= maxVisOptions && optionCount <= maxVisOptions)
@@ -245,21 +244,18 @@ namespace Menu
 		else if (optionCount == currentOption && rightPressed) return true;
 		return false;
 	}
-#pragma warning(default: 4244)
 
-#pragma warning(disable: 4267)
-	bool UserInterface::IntVector(const char* option, std::vector<int> Vector, int& position)
+	bool UserInterface::IntVector(const char* option, std::vector<int> Vector, size_t& position)
 	{
 		Option(option);
 
 		if (optionCount == currentOption) {
-			int max = Vector.size() - 1;
-			int min = 0;
+			const size_t max = Vector.size() - 1;
 			if (leftPressed) {
 				position >= 1 ? position-- : position = max;
 			}
 			if (rightPressed) {
-				position < max ? position++ : position = min;
+				position < max ? position++ : position = 0;
 			}
 		}
 
@@ -274,18 +270,17 @@ namespace Menu
 		return false;
 	}
 
-	bool UserInterface::FloatVector(const char* option, std::vector<float> Vector, int& position)
+	bool UserInterface::FloatVector(const char* option, std::vector<float> Vector, size_t& position)
 	{
 		Option(option);
 
 		if (optionCount == currentOption) {
-			size_t max = Vector.size() - 1;
-			int min = 0;
+			const size_t max = Vector.size() - 1;
 			if (leftPressed) {
 				position >= 1 ? position-- : position = max;
 			}
 			if (rightPressed) {
-				position < max ? position++ : position = min;
+				position < max ? position++ : position = 0;
 			}
 		}
 
@@ -300,13 +295,13 @@ namespace Menu
 		return false;
 	}
 
-	bool UserInterface::StringVector(const char* option, std::vector<std::string> Vector, int& position)
+	bool UserInterface::StringVector(const char* option, std::vector<std::string> Vector, size_t& position)
 	{
 		Option(option);
 
 		if (optionCount == currentOption) {
-			size_t max = Vector.size() - 1;
-			int min = 0;
+			const size_t max = Vector.size() - 1;
+			const size_t min = 0;
 			if (leftPressed) {
 				position >= 1 ? position-- : position = max;
 			}
@@ -326,13 +321,13 @@ namespace Menu
 		return false;
 	}
 
-	bool UserInterface::StringVector(const char* option, std::vector<char*> Vector, int& position)
+	bool UserInterface::StringVector(const char* option, std::vector<char*> Vector, size_t& position)
 	{
 		Option(option);
 
 		if (optionCount == currentOption) {
-			size_t max = Vector.size() - 1;
-			int min = 0;
+			const size_t max = Vector.size() - 1;
+			const size_t min = 0;
 			if (leftPressed) {
 				position >= 1 ? position-- : position = max;
 			}
@@ -351,7 +346,6 @@ namespace Menu
 		else if (optionCount == currentOption && rightPressed) return true;
 		return false;
 	}
-#pragma warning(default: 4267)
 
 	void UserInterface::End()
 	{
@@ -389,7 +383,6 @@ namespace Menu
 		}
 	}
 
-#pragma warning(disable: 4018)
 	void UserInterface::Keys()
 	{
 		selectPressed = false;
@@ -448,7 +441,6 @@ namespace Menu
 		}
 		optionCount = 0;
 	}
-#pragma warning(default : 4018)
 
 	void UserInterface::MoveMenu(SubMenus menu)
 	{
