@@ -5,7 +5,7 @@ using GetNumberOfEvents = int32_t(int32_t unk);
 using GetLabelText = const char* (void* unk, const char* label);
 using GetEventData = bool(int32_t eventGroup, int32_t eventIndex, int64_t* args, uint32_t argCount);
 using RegisterFile = uint32_t(int* p1, const char* p2, bool p3, const char* p4, bool p5);
-using TriggerScriptEvent = int(int eventgroup, uint64_t* arg, int argcount, uint32_t bit);
+using TriggerScriptEvent = int(int eventgroup, int64_t* arg, int argcount, uint32_t bit);
 
 class Hooking
 {

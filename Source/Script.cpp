@@ -79,7 +79,7 @@ void ScriptMain() {
 			{
 				gui.Title(PLAYER::GET_PLAYER_NAME(Online::g_SelectedPlayer));
 				if (gui.Option("CEO Ban")) {
-					uint64_t tseargs[3] = { -738295409, Online::g_SelectedPlayer, 1 };
+					int64_t tseargs[3] = { -738295409, Online::g_SelectedPlayer, 1 };
 					hooks.m_trigger_script_event(1, tseargs, 3, 1 << Online::g_SelectedPlayer);
 					std::string sent = std::string("SudoMod || Sent Event CEO BAN to: ") + PLAYER::GET_PLAYER_NAME(Online::g_SelectedPlayer);
 					Log_Info(_strdup(sent.c_str()));

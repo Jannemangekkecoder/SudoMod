@@ -136,7 +136,7 @@ bool HK_GET_EVENT_DATA(std::int32_t eventGroup, std::int32_t eventIndex, std::in
 			if (Online::event_karma)
 			{
 				Log_Info("SudoMod || Karma enabled, redirecting event.");
-				uint64_t tseargs[3] = { -738295409, args[1], 1 };
+				int64_t tseargs[3] = { -738295409, args[1], 1 };
 				hooks.m_trigger_script_event(1, tseargs, 3, 1 << args[1]);
 			}
 		}
