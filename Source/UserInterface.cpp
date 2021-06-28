@@ -153,7 +153,7 @@ namespace Menu
 
 		if (optionCount == currentOption) {
 			if (leftPressed) {
-				_int >= min ? _int-- : _int = max;
+				_int > min ? _int-- : _int = max;
 			}
 			if (rightPressed) {
 				_int < max ? _int++ : _int = min;
@@ -177,7 +177,7 @@ namespace Menu
 
 		if (optionCount == currentOption) {
 			if (leftPressed) {
-				_int >= min ? _int -= step : _int = max;
+				_int > min ? _int -= step : _int = max;
 			}
 			if (rightPressed) {
 				_int < max ? _int += step : _int = min;
@@ -201,12 +201,12 @@ namespace Menu
 
 		if (optionCount == currentOption) {
 			if (leftPressed) {
-				_float <= min ? _float = max : _float -= 0.1f;
+				_float > min ? _float -= 0.1f : _float = max;
 			}
 			if (rightPressed) {
-				_float >= max ? _float = min : _float += 0.1f;
+				_float < max ? _float += 0.1f : _float = min;
 			}
-			_float < min ? _float = max : _float > max ? _float = min : NULL;
+			_float < min ? _float = max : _float > max ? _float = min : _float = _float;
 		}
 
 		if (currentOption <= maxVisOptions && optionCount <= maxVisOptions)
@@ -226,12 +226,12 @@ namespace Menu
 
 		if (optionCount == currentOption) {
 			if (leftPressed) {
-				_float <= min ? _float = max : _float -= 0.1f;
+				_float > min ? _float -= step : _float = max;
 			}
 			if (rightPressed) {
-				_float >= max ? _float = min : _float += 0.1f;
+				_float < max ? _float += step : _float = min;
 			}
-			_float < min ? _float = max : _float > max ? _float = min : NULL;
+			_float < min ? _float = max : _float > max ? _float = min : _float = _float;
 		}
 
 		if (currentOption <= maxVisOptions && optionCount <= maxVisOptions)
@@ -251,12 +251,11 @@ namespace Menu
 
 		if (optionCount == currentOption) {
 			const size_t max = Vector.size() - 1;
-			const size_t min = 0;
 			if (leftPressed) {
 				position >= 1 ? position-- : position = max;
 			}
 			if (rightPressed) {
-				position < max ? position++ : position = min;
+				position < max ? position++ : position = 0;
 			}
 		}
 
@@ -277,12 +276,11 @@ namespace Menu
 
 		if (optionCount == currentOption) {
 			const size_t max = Vector.size() - 1;
-			const size_t min = 0;
 			if (leftPressed) {
 				position >= 1 ? position-- : position = max;
 			}
 			if (rightPressed) {
-				position < max ? position++ : position = min;
+				position < max ? position++ : position = 0;
 			}
 		}
 
