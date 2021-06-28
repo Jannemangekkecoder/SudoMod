@@ -1,0 +1,295 @@
+﻿  Assembling spoof.asm...
+  stdafx.cpp
+c:\users\there\source\repos\sudomod\source\types.h(54): warning C4091: 'typedef ': ignored on left of 'VECTOR2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(61): warning C4091: 'typedef ': ignored on left of 'VECTOR2_2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(68): warning C4091: 'typedef ': ignored on left of 'RGBAF' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(75): warning C4091: 'typedef ': ignored on left of 'RGBA' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(82): warning C4091: 'typedef ': ignored on left of 'RGB' when no variable is declared
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\userinterface.h(2): warning C4091: 'extern ': ignored on left of 'SubMenus' when no variable is declared
+  CrossMapping.cpp
+c:\users\there\source\repos\sudomod\source\types.h(54): warning C4091: 'typedef ': ignored on left of 'VECTOR2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(61): warning C4091: 'typedef ': ignored on left of 'VECTOR2_2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(68): warning C4091: 'typedef ': ignored on left of 'RGBAF' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(75): warning C4091: 'typedef ': ignored on left of 'RGBA' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(82): warning C4091: 'typedef ': ignored on left of 'RGB' when no variable is declared
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\userinterface.h(2): warning C4091: 'extern ': ignored on left of 'SubMenus' when no variable is declared
+  Car.cpp
+c:\users\there\source\repos\sudomod\source\types.h(54): warning C4091: 'typedef ': ignored on left of 'VECTOR2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(61): warning C4091: 'typedef ': ignored on left of 'VECTOR2_2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(68): warning C4091: 'typedef ': ignored on left of 'RGBAF' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(75): warning C4091: 'typedef ': ignored on left of 'RGBA' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(82): warning C4091: 'typedef ': ignored on left of 'RGB' when no variable is declared
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\userinterface.h(2): warning C4091: 'extern ': ignored on left of 'SubMenus' when no variable is declared
+  Gun.cpp
+c:\users\there\source\repos\sudomod\source\types.h(54): warning C4091: 'typedef ': ignored on left of 'VECTOR2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(61): warning C4091: 'typedef ': ignored on left of 'VECTOR2_2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(68): warning C4091: 'typedef ': ignored on left of 'RGBAF' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(75): warning C4091: 'typedef ': ignored on left of 'RGBA' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(82): warning C4091: 'typedef ': ignored on left of 'RGB' when no variable is declared
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\userinterface.h(2): warning C4091: 'extern ': ignored on left of 'SubMenus' when no variable is declared
+  Local.cpp
+c:\users\there\source\repos\sudomod\source\types.h(54): warning C4091: 'typedef ': ignored on left of 'VECTOR2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(61): warning C4091: 'typedef ': ignored on left of 'VECTOR2_2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(68): warning C4091: 'typedef ': ignored on left of 'RGBAF' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(75): warning C4091: 'typedef ': ignored on left of 'RGBA' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(82): warning C4091: 'typedef ': ignored on left of 'RGB' when no variable is declared
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\userinterface.h(2): warning C4091: 'extern ': ignored on left of 'SubMenus' when no variable is declared
+  MenuFunctions.cpp
+c:\users\there\source\repos\sudomod\source\types.h(54): warning C4091: 'typedef ': ignored on left of 'VECTOR2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(61): warning C4091: 'typedef ': ignored on left of 'VECTOR2_2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(68): warning C4091: 'typedef ': ignored on left of 'RGBAF' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(75): warning C4091: 'typedef ': ignored on left of 'RGBA' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(82): warning C4091: 'typedef ': ignored on left of 'RGB' when no variable is declared
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\userinterface.h(2): warning C4091: 'extern ': ignored on left of 'SubMenus' when no variable is declared
+  Misc.cpp
+c:\users\there\source\repos\sudomod\source\types.h(54): warning C4091: 'typedef ': ignored on left of 'VECTOR2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(61): warning C4091: 'typedef ': ignored on left of 'VECTOR2_2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(68): warning C4091: 'typedef ': ignored on left of 'RGBAF' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(75): warning C4091: 'typedef ': ignored on left of 'RGBA' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(82): warning C4091: 'typedef ': ignored on left of 'RGB' when no variable is declared
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\userinterface.h(2): warning C4091: 'extern ': ignored on left of 'SubMenus' when no variable is declared
+  Online.cpp
+c:\users\there\source\repos\sudomod\source\types.h(54): warning C4091: 'typedef ': ignored on left of 'VECTOR2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(61): warning C4091: 'typedef ': ignored on left of 'VECTOR2_2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(68): warning C4091: 'typedef ': ignored on left of 'RGBAF' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(75): warning C4091: 'typedef ': ignored on left of 'RGBA' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(82): warning C4091: 'typedef ': ignored on left of 'RGB' when no variable is declared
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\userinterface.h(2): warning C4091: 'extern ': ignored on left of 'SubMenus' when no variable is declared
+  Other.cpp
+c:\users\there\source\repos\sudomod\source\types.h(54): warning C4091: 'typedef ': ignored on left of 'VECTOR2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(61): warning C4091: 'typedef ': ignored on left of 'VECTOR2_2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(68): warning C4091: 'typedef ': ignored on left of 'RGBAF' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(75): warning C4091: 'typedef ': ignored on left of 'RGBA' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(82): warning C4091: 'typedef ': ignored on left of 'RGB' when no variable is declared
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\userinterface.h(2): warning C4091: 'extern ': ignored on left of 'SubMenus' when no variable is declared
+  Hooking.cpp
+c:\users\there\source\repos\sudomod\source\types.h(54): warning C4091: 'typedef ': ignored on left of 'VECTOR2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(61): warning C4091: 'typedef ': ignored on left of 'VECTOR2_2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(68): warning C4091: 'typedef ': ignored on left of 'RGBAF' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(75): warning C4091: 'typedef ': ignored on left of 'RGBA' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(82): warning C4091: 'typedef ': ignored on left of 'RGB' when no variable is declared
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\userinterface.h(2): warning C4091: 'extern ': ignored on left of 'SubMenus' when no variable is declared
+c:\users\there\source\repos\sudomod\source\hooking.cpp(134): warning C4244: 'argument': conversion from 'int64_t' to 'Player', possible loss of data
+c:\users\there\source\repos\sudomod\source\hooking.cpp(139): warning C4838: conversion from 'int' to 'uint64_t' requires a narrowing conversion
+c:\users\there\source\repos\sudomod\source\hooking.cpp(139): warning C4838: conversion from 'int64_t' to 'uint64_t' requires a narrowing conversion
+  InputHook.cpp
+c:\users\there\source\repos\sudomod\source\types.h(54): warning C4091: 'typedef ': ignored on left of 'VECTOR2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(61): warning C4091: 'typedef ': ignored on left of 'VECTOR2_2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(68): warning C4091: 'typedef ': ignored on left of 'RGBAF' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(75): warning C4091: 'typedef ': ignored on left of 'RGBA' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(82): warning C4091: 'typedef ': ignored on left of 'RGB' when no variable is declared
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\userinterface.h(2): warning C4091: 'extern ': ignored on left of 'SubMenus' when no variable is declared
+  keyboard.cpp
+c:\users\there\source\repos\sudomod\source\types.h(54): warning C4091: 'typedef ': ignored on left of 'VECTOR2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(61): warning C4091: 'typedef ': ignored on left of 'VECTOR2_2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(68): warning C4091: 'typedef ': ignored on left of 'RGBAF' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(75): warning C4091: 'typedef ': ignored on left of 'RGBA' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(82): warning C4091: 'typedef ': ignored on left of 'RGB' when no variable is declared
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\userinterface.h(2): warning C4091: 'extern ': ignored on left of 'SubMenus' when no variable is declared
+  Memory.cpp
+c:\users\there\source\repos\sudomod\source\types.h(54): warning C4091: 'typedef ': ignored on left of 'VECTOR2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(61): warning C4091: 'typedef ': ignored on left of 'VECTOR2_2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(68): warning C4091: 'typedef ': ignored on left of 'RGBAF' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(75): warning C4091: 'typedef ': ignored on left of 'RGBA' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(82): warning C4091: 'typedef ': ignored on left of 'RGB' when no variable is declared
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\userinterface.h(2): warning C4091: 'extern ': ignored on left of 'SubMenus' when no variable is declared
+  UserInterface.cpp
+c:\users\there\source\repos\sudomod\source\types.h(54): warning C4091: 'typedef ': ignored on left of 'VECTOR2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(61): warning C4091: 'typedef ': ignored on left of 'VECTOR2_2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(68): warning C4091: 'typedef ': ignored on left of 'RGBAF' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(75): warning C4091: 'typedef ': ignored on left of 'RGBA' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(82): warning C4091: 'typedef ': ignored on left of 'RGB' when no variable is declared
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\userinterface.h(2): warning C4091: 'extern ': ignored on left of 'SubMenus' when no variable is declared
+c:\users\there\source\repos\sudomod\source\userinterface.cpp(204): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\there\source\repos\sudomod\source\userinterface.cpp(207): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\there\source\repos\sudomod\source\userinterface.cpp(209): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\there\source\repos\sudomod\source\userinterface.cpp(229): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\there\source\repos\sudomod\source\userinterface.cpp(232): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\there\source\repos\sudomod\source\userinterface.cpp(234): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\there\source\repos\sudomod\source\userinterface.cpp(253): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\there\source\repos\sudomod\source\userinterface.cpp(282): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\there\source\repos\sudomod\source\userinterface.cpp(308): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\there\source\repos\sudomod\source\userinterface.cpp(334): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\there\source\repos\sudomod\source\userinterface.cpp(393): warning C4018: '>': signed/unsigned mismatch
+  NativeInvoker.cpp
+c:\users\there\source\repos\sudomod\source\types.h(54): warning C4091: 'typedef ': ignored on left of 'VECTOR2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(61): warning C4091: 'typedef ': ignored on left of 'VECTOR2_2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(68): warning C4091: 'typedef ': ignored on left of 'RGBAF' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(75): warning C4091: 'typedef ': ignored on left of 'RGBA' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(82): warning C4091: 'typedef ': ignored on left of 'RGB' when no variable is declared
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\userinterface.h(2): warning C4091: 'extern ': ignored on left of 'SubMenus' when no variable is declared
+  Script.cpp
+c:\users\there\source\repos\sudomod\source\types.h(54): warning C4091: 'typedef ': ignored on left of 'VECTOR2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(61): warning C4091: 'typedef ': ignored on left of 'VECTOR2_2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(68): warning C4091: 'typedef ': ignored on left of 'RGBAF' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(75): warning C4091: 'typedef ': ignored on left of 'RGBA' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(82): warning C4091: 'typedef ': ignored on left of 'RGB' when no variable is declared
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\userinterface.h(2): warning C4091: 'extern ': ignored on left of 'SubMenus' when no variable is declared
+c:\users\there\source\repos\sudomod\source\script.cpp(81): warning C4838: conversion from 'int' to 'uint64_t' requires a narrowing conversion
+  Generating Code...
+  dllmain.cpp
+c:\users\there\source\repos\sudomod\source\types.h(54): warning C4091: 'typedef ': ignored on left of 'VECTOR2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(61): warning C4091: 'typedef ': ignored on left of 'VECTOR2_2' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(68): warning C4091: 'typedef ': ignored on left of 'RGBAF' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(75): warning C4091: 'typedef ': ignored on left of 'RGBA' when no variable is declared
+c:\users\there\source\repos\sudomod\source\types.h(82): warning C4091: 'typedef ': ignored on left of 'RGB' when no variable is declared
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(14): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(26): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4552: '+': result of expression not used
+c:\users\there\source\repos\sudomod\source\logger.h(41): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: see declaration of '_vsnprintf'
+c:\users\there\source\repos\sudomod\source\userinterface.h(2): warning C4091: 'extern ': ignored on left of 'SubMenus' when no variable is declared
+  libMinHook-x64-v141-md.lib(hook.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  Finished generating code
+  SudoMod.vcxproj -> C:\Users\there\source\repos\SudoMod\Build\Debug\SudoMod.dll

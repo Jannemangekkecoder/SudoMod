@@ -195,7 +195,6 @@ namespace Menu
 		return false;
 	}
 
-#pragma warning(disable: 4244)
 	bool UserInterface::Float(const char* option, float& _float, int min, int max)
 	{
 		Option(option);
@@ -245,9 +244,7 @@ namespace Menu
 		else if (optionCount == currentOption && rightPressed) return true;
 		return false;
 	}
-#pragma warning(default: 4244)
 
-#pragma warning(disable: 4267)
 	bool UserInterface::IntVector(const char* option, std::vector<int> Vector, int& position)
 	{
 		Option(option);
@@ -351,7 +348,6 @@ namespace Menu
 		else if (optionCount == currentOption && rightPressed) return true;
 		return false;
 	}
-#pragma warning(default: 4267)
 
 	void UserInterface::End()
 	{
@@ -389,7 +385,6 @@ namespace Menu
 		}
 	}
 
-#pragma warning(disable: 4018)
 	void UserInterface::Keys()
 	{
 		selectPressed = false;
@@ -448,7 +443,6 @@ namespace Menu
 		}
 		optionCount = 0;
 	}
-#pragma warning(default : 4018)
 
 	void UserInterface::MoveMenu(SubMenus menu)
 	{
